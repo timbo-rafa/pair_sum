@@ -13,6 +13,17 @@ class Pair_Sum_Test:
         # (2,4)
         # (2,4)
         assert ans == 4
+    
+    def negative_test(self):
+        l = [-1, 7, 106, -100, -3, 9]
+        sum = 6
+
+        ans = count_pairs(l, sum)
+
+        # (-1,7)
+        # (-100. 106)
+        # (-3,9)
+        assert ans == 3
 
     def sequence_test(self):
         l = [n for n in range(10)]
