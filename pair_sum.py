@@ -10,11 +10,11 @@ def count_pairs(l, sum):
 
     pair_counter = 0
     # O (n)
-    for number in list(occurrences):
+    for number in occurrences:
         complement = abs(number - sum)
 
         # only count pair (x,y), not (y,x)
-        if number < complement:
+        if number < complement and complement in occurrences:
             pair_counter += occurrences[number] * occurrences[complement]
 
         elif number == complement:
